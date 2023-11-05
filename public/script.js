@@ -18,7 +18,7 @@ const displayCPU = async () => {
     section.appendChild(h3);
 
     let img = document.createElement("img");
-    img.src = "https://cpu-website.onrender.com" + cpus.img;
+    img.src = "https://cpu-website.onrender.com/" + cpus.img;
     section.appendChild(img);
 
     let speed = document.createElement("p");
