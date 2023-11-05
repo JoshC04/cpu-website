@@ -2,6 +2,11 @@ const displayCPU = async () => {
   let cpuJSON = await getCPU();
   let cpuContainer = document.getElementById("container");
 
+  if (cpuJSON == "") {
+    console.log("JSON not loaded");
+    return;
+  }
+
   cpuJSON.forEach((cpus) => {
     let section = document.createElement("section");
     section.classList.add("cpu-style");
