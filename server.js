@@ -62,7 +62,7 @@ app.get("/api/cpus", (req, res) => {
       "MSI MAG Z790 TOMAHAWK WIFI",
       "ASRock B660M Pro RS",
     ],
-    img: "images/IntelCorei3-12100F.jpg",
+    img: "images/IntelCore12thGeni3-12100F.jpg",
   };
 
   res.json(cpus);
