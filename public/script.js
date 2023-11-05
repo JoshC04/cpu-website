@@ -55,7 +55,7 @@ const displayCPU = async () => {
 
 const getCPU = async () => {
   try {
-    return (await fetch("http://localhost:3000/api/cpus")).json();
+    return (await fetch("https://cpu-website.onrender.com/api/cpus")).json();
   } catch (error) {
     console.log("error");
   }
