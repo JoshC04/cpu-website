@@ -1,6 +1,5 @@
 const displayCPU = async () => {
-  let response = await fetch("http://localhost:3000/api/cpus");
-  let cpuJSON = await response.json();
+  let cpuJSON = await getCPU();
   let cpuContainer = document.getElementById("container");
 
   cpuJSON.forEach((cpus) => {
@@ -47,6 +46,14 @@ const displayCPU = async () => {
       ul.appendChild(li);
     });
   });
+};
+
+const getCPU = async () => {
+  try {
+    return (await fetch("http://localhost:3000/api/cpus")).json();
+  } catch (error) {
+    console.log("error");
+  }
 };
 
 window.onload = () => {
